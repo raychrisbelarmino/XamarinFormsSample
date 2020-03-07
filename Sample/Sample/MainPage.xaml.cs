@@ -15,8 +15,8 @@ namespace Sample
             NavigationPage.SetHasNavigationBar(this, false);
             //Temp
             /**/
-            NameEntry.Text = "Chris Ray Belarmino";
-            EmailEntry.Text = "raychrisbelarmino@gmail.com";
+            NameEntry.Text = "Name";
+            EmailEntry.Text = "Email@gmail.com";
             PasswordEntry.Text = "TabbedPage";
         }
 
