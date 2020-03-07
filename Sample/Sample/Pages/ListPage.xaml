@@ -19,7 +19,7 @@
                    HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
             <Entry x:Name="ToDoEntry" Placeholder="Input a thing to do here.." HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
                    Grid.Column="0" Grid.Row="1" Margin="5,0" Keyboard="Text" ReturnType="Done"/>
-            <Button Text="Add" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BorderRadius="5" BackgroundColor="Blue" TextColor="White" 
+            <local:CustomButton Text="Add" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BorderRadius="5" BackgroundColor="Blue" TextColor="White" 
                     Grid.Row="1" Grid.Column="1" Margin="5,0" Clicked="AddButton_Clicked"/>
             <ListView x:Name="toDoListView" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" 
                       SeparatorVisibility="None" HasUnevenRows="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
@@ -42,19 +42,21 @@
                                 </Grid.ColumnDefinitions>
                                 <ImageButton Source="DoneIcon" BackgroundColor="Green" Margin="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
                                     Clicked="DoneButton_Clicked" Grid.Column="0" ClassId="{Binding id}">
-                                    <!--<ImageButton.Triggers>
+                                    <!--Trigger-->
+                                    <ImageButton.Triggers>
                                         <DataTrigger TargetType="ImageButton" Binding="{Binding isDone}" Value="true">
                                             <Setter Property="BackgroundColor" Value="Gray" />
                                         </DataTrigger>
-                                    </ImageButton.Triggers>-->
+                                    </ImageButton.Triggers>
                                 </ImageButton>
                                 <Entry Text="{Binding text}" ClassId="{Binding id}" HorizontalOptions="FillAndExpand" IsEnabled="True" VerticalOptions="FillAndExpand" Margin="5" 
                                        Grid.Column="1" Completed="ItemEntry_Completed">
-                                    <!--<Entry.Triggers>
+                                    <!--Trigger-->
+                                    <Entry.Triggers>
                                         <DataTrigger TargetType="Entry" Binding="{Binding isDone}" Value="true">
                                             <Setter Property="IsEnabled" Value="False" />
                                         </DataTrigger>
-                                    </Entry.Triggers>-->
+                                    </Entry.Triggers>
                                 </Entry>
                                 <ImageButton Source="DeleteIcon" BackgroundColor="Red" Margin="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
                                     Clicked="DeleteButton_Clicked" Grid.Column="2" ClassId="{Binding id}"/>

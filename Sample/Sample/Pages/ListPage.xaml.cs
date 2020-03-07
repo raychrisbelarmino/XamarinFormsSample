@@ -46,6 +46,7 @@ namespace Sample
                         item = i;
                 }
                 toDoList.Remove(item);
+                DependencyService.Get<iToastService>().Show("Item deleted!", true);
             }
         }
 
@@ -56,7 +57,10 @@ namespace Sample
             foreach (var i in toDoList)
             {
                 if (i.id == Convert.ToInt32(btn.ClassId))
+                {
                     i.isDone = !i.isDone;
+                    DependencyService.Get<iToastService>().Show(i.isDone ? "Item done!" : "Item undone!", true);
+                }
             }
         }
 
@@ -72,7 +76,7 @@ namespace Sample
                     if (i.id == Convert.ToInt32(entry.ClassId))
                         i.text = entry.Text;
                 }
-                DisplayAlert("Update", "Item updated.", "Okay");
+                DependencyService.Get<iToastService>().Show("Item updated!", true);
             }
             else
             {

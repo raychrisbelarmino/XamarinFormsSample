@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sample.MasterPage"
-             xmlns:local="clr-namespace:Sample;assembly=Sample"
+             xmlns:local="clr-namespace:Sample"
              Title="MasterPage">
     <ContentPage.Content>
         <StackLayout>
@@ -30,7 +30,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="LogoutButton" Margin="5,10" Text="Logout" HorizontalOptions="CenterAndExpand"
+            <local:CustomButton x:Name="LogoutButton" Margin="5,10" Text="Logout" HorizontalOptions="CenterAndExpand"
                     VerticalOptions="EndAndExpand" BackgroundColor="Red" TextColor="White" BorderRadius="5" x:FieldModifier="public"/>
         </StackLayout>
     </ContentPage.Content>
