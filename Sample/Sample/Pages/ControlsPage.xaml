@@ -5,7 +5,7 @@
              Title="ControlsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Controls"
+            <Label Text="Try the Xamarin Forms Controls here.."
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

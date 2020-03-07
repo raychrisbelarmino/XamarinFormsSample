@@ -13,6 +13,11 @@ namespace Sample
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            //Temp
+            /**/
+            NameEntry.Text = "Chris Ray Belarmino";
+            EmailEntry.Text = "raychrisbelarmino@gmail.com";
+            PasswordEntry.Text = "TabbedPage";
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
