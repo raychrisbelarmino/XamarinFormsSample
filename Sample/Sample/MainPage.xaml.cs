@@ -25,11 +25,13 @@ namespace Sample
             if(!string.IsNullOrEmpty(NameEntry.Text) && !string.IsNullOrEmpty(EmailEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
             {
                 if (PasswordEntry.Text.Equals("MasterDetailPage"))
-                    await Navigation.PushAsync(new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text), true);
+                    //await Navigation.PushAsync(new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text), true);
+                    Application.Current.MainPage = new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text);
                 else if (PasswordEntry.Text.Equals("TabbedPage"))
-                    await Navigation.PushAsync(new SampleTabbedPage(NameEntry.Text, EmailEntry.Text), true);
+                    //await Navigation.PushAsync(new SampleTabbedPage(NameEntry.Text, EmailEntry.Text), true);
+                    Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
                 else
-                    await DisplayAlert("Error", "Account does not exist", "Okay");
+                            await DisplayAlert("Error", "Account does not exist", "Okay");
             }
             else
             {
@@ -45,9 +47,23 @@ namespace Sample
             
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
+
+
+            //logo.Rotation = 90;//animation without time
+            //await logo.RotateTo(90, 5000);//animation with time
+
+            //logo.Scale = 2;//animation without time
+            //await logo.ScaleTo(2, 5000);//animation with time
+
+            //logo.TranslationX = 50;//animation without time
+            //logo.TranslationY = 50;//animation without time
+            //await logo.TranslateTo(50, 50, 5000);//animation with time
+
+            //logo.Opacity = 0.5;//animation without time
+            //await logo.FadeTo(0.1, 5000);//animation with time
         }
 
         protected override void OnDisappearing()
@@ -56,6 +72,11 @@ namespace Sample
             NameEntry.Text = string.Empty;
             EmailEntry.Text = string.Empty;
             PasswordEntry.Text = string.Empty;
+        }
+
+        private async void SignUp_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new SignupPage(), true);
         }
     }
 }
