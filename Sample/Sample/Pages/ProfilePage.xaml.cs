@@ -33,6 +33,13 @@ namespace Sample
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
+            //Remove all saved properties
+            //Application.Current.Properties.Clear();
+            //Remove specific properties
+            Application.Current.Properties.Remove("email");
+            Application.Current.Properties.Remove("name");
+            Application.Current.SavePropertiesAsync();
+
             Application.Current.MainPage = new MainPage();
         }
     }

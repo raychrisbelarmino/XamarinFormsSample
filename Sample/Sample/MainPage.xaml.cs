@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Sample
@@ -13,23 +9,21 @@ namespace Sample
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            //Temp
-            /**/
-            NameEntry.Text = "Name";
-            EmailEntry.Text = "Email@gmail.com";
-            PasswordEntry.Text = "TabbedPage";
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(NameEntry.Text) && !string.IsNullOrEmpty(EmailEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
             {
-                if (PasswordEntry.Text.Equals("MasterDetailPage"))
-                    Application.Current.MainPage = new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text);
-                else if (PasswordEntry.Text.Equals("TabbedPage"))
-                    Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
-                else
-                            await DisplayAlert("Error", "Account does not exist", "Okay");
+                Application.Current.Properties["name"] = NameEntry.Text;
+                Application.Current.Properties["email"] = EmailEntry.Text;
+                Application.Current.SavePropertiesAsync();
+
+                Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
+                /*
+                //Use this if you want the master detail page
+                Application.Current.MainPage = new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text); 
+                */
             }
             else
             {
@@ -42,7 +36,6 @@ namespace Sample
                     NameEntry.Focus();
                 }
             }
-            
         }
 
         protected async override void OnAppearing()
