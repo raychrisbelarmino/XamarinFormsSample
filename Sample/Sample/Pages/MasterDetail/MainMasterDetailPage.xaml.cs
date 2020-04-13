@@ -17,12 +17,6 @@ namespace Sample
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
             masterPage.ListView.ItemSelected += OnItemSelected;
-            masterPage.LogoutButton.Clicked += LogoutButton_Clicked;
-        }
-
-        private async void LogoutButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopToRootAsync(true);
         }
 
         public MainMasterDetailPage(string name, string email)
@@ -32,7 +26,6 @@ namespace Sample
             masterPage.GreetingLabel.Text = "Welcome "+name+"!";
             masterPage.EmailLabel.Text = email;
             masterPage.ListView.ItemSelected += OnItemSelected;
-            masterPage.LogoutButton.Clicked += LogoutButton_Clicked;
             
         }
 

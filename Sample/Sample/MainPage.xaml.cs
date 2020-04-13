@@ -25,10 +25,8 @@ namespace Sample
             if(!string.IsNullOrEmpty(NameEntry.Text) && !string.IsNullOrEmpty(EmailEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
             {
                 if (PasswordEntry.Text.Equals("MasterDetailPage"))
-                    //await Navigation.PushAsync(new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text), true);
                     Application.Current.MainPage = new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text);
                 else if (PasswordEntry.Text.Equals("TabbedPage"))
-                    //await Navigation.PushAsync(new SampleTabbedPage(NameEntry.Text, EmailEntry.Text), true);
                     Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
                 else
                             await DisplayAlert("Error", "Account does not exist", "Okay");

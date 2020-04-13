@@ -31,7 +31,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <local:CustomButton x:Name="LogoutButton" Margin="5,10" Text="Logout" HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="EndAndExpand" BackgroundColor="Red" TextColor="White" BorderRadius="5" x:FieldModifier="public"/>
+                    VerticalOptions="EndAndExpand" BackgroundColor="Red" TextColor="White" BorderRadius="5" Clicked="LogoutButton_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

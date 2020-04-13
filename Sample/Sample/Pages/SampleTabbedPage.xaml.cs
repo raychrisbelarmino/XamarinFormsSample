@@ -16,19 +16,12 @@ namespace Sample
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
-            profilePage.LogoutButton.Clicked += LogoutButton_Clicked;
-        }
-
-        private async void LogoutButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopToRootAsync(true);
         }
 
         public SampleTabbedPage(string name, string email)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            profilePage.LogoutButton.Clicked += LogoutButton_Clicked;
             profilePage.Name = name;
             profilePage.Email = email;
         }

@@ -17,5 +17,10 @@ namespace Sample
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
 		}
+
+		private void LogoutButton_Clicked(object sender, EventArgs e)
+		{
+			Application.Current.MainPage = new MainPage();
+		}
 	}
 }
