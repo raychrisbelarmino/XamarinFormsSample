@@ -9,6 +9,7 @@
                 <Setter Property="Margin" Value="5,0,5,0"/>
                 <Setter Property="Keyboard" Value="Text"/>
                 <Setter Property="ReturnType" Value="Next"/>
+                <Setter Property="FontFamily" Value="Roboto-Thin.ttf#Roboto Thin"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
