@@ -13,7 +13,7 @@
         <Entry x:Name="EmailEntry" Placeholder="Input email" Keyboard="Email" Style="{StaticResource EntryStyle}"/>
         <Entry x:Name="PasswordEntry" Placeholder="Input password" IsPassword="True" Style="{StaticResource EntryStyle}"/>
         <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm password" IsPassword="True" ReturnType="Done" Style="{StaticResource EntryStyle}"/>
-        <local:CustomButton Text="Sign Up" BackgroundColor="Green" BorderRadius="5" HorizontalOptions="Center" TextColor="White"/>
+        <local:CustomButton Text=" Sign Up " BackgroundColor="Green" BorderRadius="5" HorizontalOptions="Center" TextColor="White"/>
         <Label Text="Sign in" HorizontalOptions="Center" Margin="5,0,5,0" TextColor="Black">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="SignIn_Tapped"/>

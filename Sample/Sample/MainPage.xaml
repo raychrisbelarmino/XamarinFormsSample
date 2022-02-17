@@ -10,7 +10,7 @@
         <Entry x:Name="NameEntry" Placeholder="Input name" Style="{StaticResource EntryStyle}"/>
         <Entry x:Name="EmailEntry" Placeholder="Input email" Keyboard="Email" Style="{StaticResource EntryStyle}"/>
         <Entry x:Name="PasswordEntry" Placeholder="Input password" IsPassword="True" ReturnType="Done" Style="{StaticResource EntryStyle}"/>
-        <local:CustomButton Text="Enter" BackgroundColor="Green" BorderRadius="5" HorizontalOptions="Center" TextColor="White" Clicked="Button_Clicked"
+        <local:CustomButton Text=" Enter " BackgroundColor="Green" BorderRadius="5" HorizontalOptions="Center" TextColor="White" Clicked="Button_Clicked"
                             FontFamily="Roboto-Thin.tff#Roboto Thin"/>
         <Label Text="Sign up" HorizontalOptions="Center" Margin="5,0,5,0" TextColor="Black" 
                FontFamily="Roboto-Thin.ttf#Roboto Thin">

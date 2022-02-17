@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
 
 namespace Sample
 {
@@ -29,18 +31,19 @@ namespace Sample
         public ProfilePage ()
 		{
 			InitializeComponent ();
-		}
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+        }
 
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
             //Remove all saved properties
             //Application.Current.Properties.Clear();
             //Remove specific properties
-            Application.Current.Properties.Remove("email");
-            Application.Current.Properties.Remove("name");
-            Application.Current.SavePropertiesAsync();
+            Xamarin.Forms.Application.Current.Properties.Remove("email");
+            Xamarin.Forms.Application.Current.Properties.Remove("name");
+            Xamarin.Forms.Application.Current.SavePropertiesAsync();
 
-            Application.Current.MainPage = new MainPage();
+            Xamarin.Forms.Application.Current.MainPage = new MainPage();
         }
     }
 }

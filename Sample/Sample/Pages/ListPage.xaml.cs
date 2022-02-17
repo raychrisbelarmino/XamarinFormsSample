@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
 
 namespace Sample
 {
@@ -19,6 +21,7 @@ namespace Sample
 		{
 			InitializeComponent ();
             toDoListView.ItemsSource = toDoList;
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
 
         private void AddButton_Clicked(object sender, EventArgs e)
@@ -46,7 +49,8 @@ namespace Sample
                         item = i;
                 }
                 toDoList.Remove(item);
-                DependencyService.Get<iToastService>().Show("Item deleted!", true);
+                if (Device.RuntimePlatform == Device.Android)
+                    DependencyService.Get<iToastService>().Show("Item deleted!", true);
             }
         }
 
@@ -59,14 +63,16 @@ namespace Sample
                 if (i.id == Convert.ToInt32(btn.ClassId))
                 {
                     i.isDone = !i.isDone;
-                    DependencyService.Get<iToastService>().Show(i.isDone ? "Item done!" : "Item undone!", true);
+                    if (Device.RuntimePlatform == Device.Android)
+                        DependencyService.Get<iToastService>().Show(i.isDone ? "Item done!" : "Item undone!", true);
+                    
                 }
             }
         }
 
         private void ItemEntry_Completed(object sender, EventArgs e)
         {
-            Entry entry = sender as Entry;
+            Xamarin.Forms.Entry entry = sender as Xamarin.Forms.Entry;
             ToDoModel item = new ToDoModel();
 
             if (!string.IsNullOrEmpty(entry.Text))
@@ -76,7 +82,8 @@ namespace Sample
                     if (i.id == Convert.ToInt32(entry.ClassId))
                         i.text = entry.Text;
                 }
-                DependencyService.Get<iToastService>().Show("Item updated!", true);
+                if (Device.RuntimePlatform == Device.Android)
+                    DependencyService.Get<iToastService>().Show("Item updated!", true);
             }
             else
             {

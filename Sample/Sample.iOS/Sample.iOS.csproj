@@ -98,48 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,8 +114,48 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Sample\Sample.csproj">
-      <Project>{43558D1D-13D0-49EB-9C40-9A44E0055B73}</Project>
+      <Project>{09C63C24-34D8-453A-8B7D-5A4FCC551706}</Project>
       <Name>Sample</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png" />
+    <ImageAsset Include="Assets.xcassets\ControlIcon.imageset\ControlIcon-1.png" />
+    <ImageAsset Include="Assets.xcassets\ControlIcon.imageset\ControlIcon-2.png" />
+    <ImageAsset Include="Assets.xcassets\ControlIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ControlIcon.imageset\ControlIcon.png" />
+    <ImageAsset Include="Assets.xcassets\DeleteIcon.imageset\DeleteIcon-1.png" />
+    <ImageAsset Include="Assets.xcassets\DeleteIcon.imageset\DeleteIcon-2.png" />
+    <ImageAsset Include="Assets.xcassets\DeleteIcon.imageset\DeleteIcon.png" />
+    <ImageAsset Include="Assets.xcassets\DeleteIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\DoneIcon.imageset\DoneIcon.png" />
+    <ImageAsset Include="Assets.xcassets\DoneIcon.imageset\DoneIcon-1.png" />
+    <ImageAsset Include="Assets.xcassets\DoneIcon.imageset\DoneIcon-2.png" />
+    <ImageAsset Include="Assets.xcassets\DoneIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ListIcon.imageset\ListIcon.png" />
+    <ImageAsset Include="Assets.xcassets\ListIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ListIcon.imageset\ListIcon-2.png" />
+    <ImageAsset Include="Assets.xcassets\ListIcon.imageset\ListIcon-1.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo-2.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo-1.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo.png" />
+    <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProfileIcon.imageset\ProfileIcon-1.png" />
+    <ImageAsset Include="Assets.xcassets\ProfileIcon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ProfileIcon.imageset\ProfileIcon.png" />
+    <ImageAsset Include="Assets.xcassets\ProfileIcon.imageset\ProfileIcon-2.png" />
   </ItemGroup>
 </Project>
