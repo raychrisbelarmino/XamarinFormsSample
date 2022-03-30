@@ -20,6 +20,7 @@ namespace Sample
         private async void SignIn_Tapped(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync(true);
+            //await Navigation.PopAsync(false);
         }
     }
 }

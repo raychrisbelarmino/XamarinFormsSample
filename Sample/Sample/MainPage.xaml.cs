@@ -60,14 +60,15 @@ namespace Sample
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            NameEntry.Text = string.Empty;
-            EmailEntry.Text = string.Empty;
-            PasswordEntry.Text = string.Empty;
+            //NameEntry.Text = string.Empty;
+            //EmailEntry.Text = string.Empty;
+            //PasswordEntry.Text = string.Empty;
         }
 
         private async void SignUp_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new SignupPage(), true);
+            //await Navigation.PushAsync(new SignupPage(), false);
         }
     }
 }

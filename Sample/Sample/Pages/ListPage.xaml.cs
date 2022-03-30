@@ -59,7 +59,7 @@ namespace Sample
                 if (i.id == Convert.ToInt32(btn.ClassId))
                 {
                     i.isDone = !i.isDone;
-                    DependencyService.Get<iToastService>().Show(i.isDone ? "Item done!" : "Item undone!", true);
+                    DependencyService.Get<iToastService>().Show(i.isDone ? "Item done!" : "Item undone!", false);
                 }
             }
         }
