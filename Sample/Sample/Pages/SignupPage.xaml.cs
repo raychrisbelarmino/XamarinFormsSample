@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace Sample
 {
@@ -15,6 +16,7 @@ namespace Sample
         public SignupPage()
         {
             InitializeComponent();
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
 
         private async void SignIn_Tapped(object sender, EventArgs e)

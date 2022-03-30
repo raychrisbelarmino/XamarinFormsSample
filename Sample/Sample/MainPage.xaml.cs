@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace Sample
 {
@@ -8,18 +9,22 @@ namespace Sample
         public MainPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
+            NameEntry.Text = "Name";
+            EmailEntry.Text = "Email@gmail.com";
+            PasswordEntry.Text = "TabbedPage";
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(NameEntry.Text) && !string.IsNullOrEmpty(EmailEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
             {
-                Application.Current.Properties["name"] = NameEntry.Text;
-                Application.Current.Properties["email"] = EmailEntry.Text;
-                Application.Current.SavePropertiesAsync();
+                Xamarin.Forms.Application.Current.Properties["name"] = NameEntry.Text;
+                Xamarin.Forms.Application.Current.Properties["email"] = EmailEntry.Text;
+                Xamarin.Forms.Application.Current.SavePropertiesAsync();
 
-                Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
+                Xamarin.Forms.Application.Current.MainPage = new SampleTabbedPage(NameEntry.Text, EmailEntry.Text);
                 /*
                 //Use this if you want the master detail page
                 Application.Current.MainPage = new MainMasterDetailPage(NameEntry.Text, EmailEntry.Text); 
