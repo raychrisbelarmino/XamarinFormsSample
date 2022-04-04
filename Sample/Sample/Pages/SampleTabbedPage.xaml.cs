@@ -31,6 +31,7 @@ namespace Sample
             profilePage.Name = name;
             profilePage.Email = email;
             this.On<Xamarin.Forms.PlatformConfiguration.Android>().SetIsSwipePagingEnabled(false);
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
         }
     }
 }

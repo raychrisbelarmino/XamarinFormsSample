@@ -36,19 +36,19 @@ namespace Sample
         protected override void OnStart()
         {
             // Handle when your app starts
-            //Console.WriteLine("App starts");
+            Console.WriteLine("App starts");
         }
 
         protected override void OnSleep()
         {
             // Handle when your app sleeps
-            //Console.WriteLine("App sleeps");
+            Console.WriteLine("App sleeps");
         }
 
         protected override void OnResume()
         {
             // Handle when your app resumes
-            //Console.WriteLine("App resumes");
+            Console.WriteLine("App resumes");
         }
     }
 }

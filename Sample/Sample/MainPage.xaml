@@ -16,8 +16,10 @@
         </Entry>
         <Entry x:Name="EmailEntry" Placeholder="Input email" Keyboard="Email" Style="{StaticResource EntryStyle}"/>
         <Entry x:Name="PasswordEntry" Placeholder="Input password" IsPassword="True" ReturnType="Done" Style="{StaticResource EntryStyle}"/>
+        <Button Text="Enter 2" BackgroundColor="Blue" BorderRadius="5" HorizontalOptions="Center" TextColor="White"
+                            FontFamily="Roboto-Thin.tff#Roboto Thin"/>
         <local:CustomButton Text="Enter" BackgroundColor="Green" BorderRadius="5" HorizontalOptions="Center" TextColor="White" Clicked="Button_Clicked"
-                            FontFamily="Roboto-Thin.tff#Roboto Thin">
+                            FontFamily="Roboto-Thin.tff#Roboto Thin" AutoCapitalization="False">
             <local:CustomButton.Triggers>
                 <!--<DataTrigger TargetType="local:CustomButton" Binding="{Binding Source={x:Reference EmailEntry},Path=Text.Length}" Value="0">
                     <Setter Property="IsEnabled" Value="False" />
@@ -36,7 +38,7 @@
         </local:CustomButton>
         <Label Text="Sign up" HorizontalOptions="Center" Margin="5,0,5,0" TextColor="Black" 
                FontFamily="Roboto-Thin.ttf#Roboto Thin">
-            <Label.GestureRecognizers> 
+            <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="SignUp_Tapped"/>
             </Label.GestureRecognizers>
         </Label>
