@@ -23,9 +23,9 @@ namespace Sample
 
             if (Application.Current.Properties.ContainsKey("email") && Application.Current.Properties.ContainsKey("name"))
             {
-                Application.Current.MainPage = new SampleTabbedPage(
+                Application.Current.MainPage = new NavigationPage(new SampleTabbedPage(
                     Application.Current.Properties["name"].ToString(), Application.Current.Properties["email"].ToString()
-                );
+                ));
             }
             else
             {

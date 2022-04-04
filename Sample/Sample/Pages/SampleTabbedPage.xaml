@@ -8,6 +8,11 @@
              android:TabbedPage.BarItemColor="Gray"
              android:TabbedPage.BarSelectedItemColor="DarkGray">
              <!--BarBackgroundColor="#1976D2"-->
+    <!--<NavigationPage Title="ListPage">
+        <x:Arguments>
+            <local:ListPage/>
+        </x:Arguments>
+    </NavigationPage>-->
     <local:ListPage Title="ListPage" Icon="ListIcon"/>
     <local:ControlsPage Title="ControlsPage" Icon="ControlIcon"/>
     <local:ProfilePage x:Name="profilePage" Title="ProfilePage" Icon="ProfileIcon"/>

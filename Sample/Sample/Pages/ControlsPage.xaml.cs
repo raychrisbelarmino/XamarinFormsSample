@@ -113,5 +113,10 @@ namespace Sample
                     break;
             }
         }
+
+        private async void CustomButton_Clicked(object sender, EventArgs e)
+        {
+           await Navigation.PushAsync(new MainMasterDetailPage(), false);
+        }
     }
 }

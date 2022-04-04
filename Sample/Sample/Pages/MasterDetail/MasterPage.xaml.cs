@@ -16,6 +16,9 @@ namespace Sample
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
+
+			GreetingLabel.Text = "Hello, World!";
+			EmailLabel.Text = Application.Current.Properties["email"].ToString();
 		}
 
 		private void LogoutButton_Clicked(object sender, EventArgs e)
